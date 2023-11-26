@@ -1,2 +1,2 @@
-# SDA
-SDAcademy JavaScript HTML CSS Course Repo
+# HTML
+SDAcademy HTML Branch
