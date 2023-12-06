@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .article-animal {
+                border: 0.005cm solid red;
+            }
+
+            /* Zpusob stylovani pomoci prirazeni trid */
+            .article-animal-link {
+                color: red;
+            }
+
+            .article-animal-text {
+                color: gray;
+            }
+
+            /* Alternativni zpusob stylovani pomoci "mezery" -> odkazovani na strukturu kodu */
+            .article-animal a {
+                color: red;
+            }
+
+            .article-animal p {
+                color: gray;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h2>Nastylovano pomoci trid</h2>
+        <article class="article-animal">
+            <img src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
+                alt="Na obrazku je kocka">
+            <div>
+                <h3><a class="article-animal-link" href="www.seznam.cz">Hlavni nadpis naseho clanku</a></h3>
+                <p class="article-animal-text">Kratky text, ktery ma uzivetele upoutat k clanku</p>
+            </div>
+        </article>
+        <article class="article-animal">
+            <img src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
+                alt="Na obrazku je kocka">
+            <div>
+                <h3><a class="article-animal-link" href="www.seznam.cz">Hlavni nadpis naseho clanku</a></h3>
+                <p class="article-animal-text">Kratky text, ktery ma uzivetele upoutat k clanku</p>
+            </div>
+        </article>
+
+        <h2>Nastylovano pomoci "mezer"</h2>
+        <article class="article-animal">
+            <img src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
+                alt="Na obrazku je kocka">
+            <div>
+                <h3><a href="www.seznam.cz">Hlavni nadpis naseho clanku</a></h3>
+                <p>Kratky text, ktery ma uzivetele upoutat k clanku</p>
+            </div>
+        </article>
+        <article class="article-animal">
+            <img src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
+                alt="Na obrazku je kocka">
+            <div>
+                <h3><a href="www.seznam.cz">Hlavni nadpis naseho clanku</a></h3>
+                <p>Kratky text, ktery ma uzivetele upoutat k clanku</p>
+            </div>
+        </article>
+
+
+    </body>
+
+</html>

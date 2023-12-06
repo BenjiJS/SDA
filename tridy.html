@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            /* tecka pred nazvem indikuje, ze pracuji s tridou a ne znackou 
+                    - nyni aplikuji tridu .odstavec pouze na vsechny znaky <p>
+            */
+            p.odstavec {
+                color: red;
+                font-weight: bold;
+                background-color: rgb(255, 208, 0);
+            }
+
+            #h2-podnadpis {
+                color: green;
+            }
+
+            /* 
+            Pouziti pro debugovaci ucely
+            * {
+                color: green !important;
+                background: black !important;
+                outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+            } */
+
+            .trida1 {
+                color: blue;
+            }
+
+            .trida2 {
+                background-color: red;
+            }
+
+            .trida1.trida2 {
+                font-weight: bold;
+            }
+
+            .trida1 .trida2 {
+                /* tady vybiram dite nebo potomka */
+                color: white;
+            }
+
+            .trida1>.trida2 {
+                /* tady vybiram dite */
+                color: green;
+            }
+
+            .article-today {
+                /* ohraniceni: tloustka-ohranice typ-ohraniceni barva-ohraniceni */
+                border: 0.05cm solid black;
+            }
+
+            .article-today h3 {
+                /*
+                 0 = zadne id
+                 1 = trida
+                 1 = element
+                 0 1 1 => 11
+                */
+                color: blue;
+            }
+
+
+            a[href="www.google.com"] {
+                color: orange;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-decoration: underline;
+            }
+
+            * {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Tridy</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorem eos amet,
+            reiciendis eveniet laudantium quis tempora quas, obcaecati ad cupiditate temporibus reprehenderit? Non
+            fugiat quasi minus fuga accusamus!
+
+            praesentium quia natus? Omnis ut debitis quibusdam aut. Obcaecati porro voluptatibus ipsam? Dolore magnam
+            omnis eveniet id non natus et quae commodi inventore similique voluptate repellat veniam vero sint dicta,
+            neque odit aliquid, in consequatur ad officiis expedita. In aperiam vitae nam recusandae repellendus cumque.
+        </p>
+
+        <h2 id="h2-podnadpis">Podnapis</h2>
+
+        <p class="odstavec">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis non, omnis, eaque pariatur, nemo hic
+            expedita animi laboriosam enim quo quia ex? Illum inventore sint molestiae voluptatibus cupiditate nemo ea?
+        </p>
+
+        <div class="odstavec">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur temporibus quod dolor quas a. Quae hic
+            dolor fugit ea deleniti delectus officia, nulla natus minima maiores reiciendis incidunt voluptatibus nam
+            accusamus. Aperiam quod possimus quo sit ut?
+        </div>
+
+        <h2>Komplexnejsi tridy</h2>
+
+        <p class="trida1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis deleniti provident ullam eveniet
+            quas, voluptate culpa sint commodi quo nisi iure dicta sunt, quos quasi eius itaque sed fugiat.
+
+
+            <u class="trida2">DITE TRIDA2</u>
+
+            <span>
+                <i class="trida2">
+                    POTOMEK TRIDA2
+                </i>
+            </span>
+        </p>
+
+        <p class="trida1 trida2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis deleniti provident ullam eveniet
+            quas, voluptate culpa sint commodi quo nisi iure dicta sunt, quos quasi eius itaque sed fugiat.
+        </p>
+
+
+        <h2>Clanky z dneska</h2>
+        <article class="article-today">
+            <header>
+                <h3>Na dalnici d1 je dnes hodne snehu</h3>
+            </header>
+            <p>Tady je obsah clanku o tomto problemu...</p>
+            <a href="www.seznam.cz">Seznam.cz</a>
+        </article>
+
+        <article class="article-today">
+            <header>
+                <h3>Clanek o inflaci</h3>
+            </header>
+            <p>Inflace...</p>
+
+            <a href="www.google.com">Google.com</a>
+        </article>
+
+        <h2>Clanky ze vcerjeska</h2>
+
+    </body>
+
+</html>

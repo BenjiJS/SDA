@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .ctverec {
+                height: 200px;
+                width: 200px;
+                border: 1px solid red;
+
+                font-size: 2rem;
+            }
+
+            /* schovani divu */
+
+            /* 1. moznost = pouziti vlastnosti visbility */
+            .hidden {
+                visibility: hidden;
+            }
+
+            /* 2. moznost = pouziti vlasnosti display */
+            .none {
+                display: none;
+            }
+
+            b {
+                height: 200px;
+                width: 100px;
+                background-color: red;
+                display: inline-block;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2>Hidden vs. none</h2>
+
+        <div class="ctverec">1</div>
+        <div class="ctverec hidden">2</div>
+        <div class="ctverec none">3</div>
+        <div class="ctverec">4</div>
+
+        <h2>block vs. inline</h2>
+
+        <b>Tucne pismo</b>Text za tucnym pismem
+
+    </body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap"
+            rel="stylesheet">
+
+        <style>
+            html,
+            body {
+                height: 100%;
+                /* Vychozi velikost pisma: 16px */
+
+                font-family: 'Roboto', sans-serif;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .obdelnik {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+                /* margin: 10px; */
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-bottom: 20px;
+
+                padding-top: 2px;
+                padding-left: 20px;
+                padding-right: 100px;
+            }
+
+            .polovicny-obdelnik {
+                width: 50%;
+                height: 50%;
+                border: 1px solid black;
+            }
+
+            h1 {
+                /* px = rem * vychozi_hodnota_px_v_html */
+
+                /* pro very small => 2 * 9px = 18px */
+                /* 2 * 16px = 32px  -> toto plati pro velikost medium (v nstaveni chromu) */
+                /* 2 * 24px = 48px  -> toto plati pro velikost very large (v nstaveni chromu) */
+                font-size: 2rem;
+                /* v scss by to mohlo vypdata jako `font-size: rem(24px)` */
+            }
+
+            .polovicny-obdelnik {
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-weight: 400;
+            }
+
+            .text-center {
+                border: 1px solid red;
+                width: 300px;
+                height: 80px;
+
+                /* horizontalni center textu */
+                text-align: center;
+
+                /* vertikalni center textu */
+                line-height: 80px;
+            }
+        </style>
+
+    </head>
+
+    <body style="background-color: rgba(128, 128, 128, 0.677);">
+
+        <h1>
+            Hlavni nadpis na strance
+
+        </h1>
+        <span style="color: rgba(0, 255, 64, 0.25); box-shadow: 7px -4px 20px 8px rgba(232,25,232,0.53);">lorem
+            asdasd
+        </span>
+
+
+        <div class="polovicny-obdelnik">
+            <div class="polovicny-obdelnik">
+                <div class="polovicny-obdelnik">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="obdelnik">
+            AHoj
+
+            <div class="polovicny-obdelnik">
+
+            </div>
+        </div>
+
+
+        <div class="text-center">
+            text pod obdelnikem
+        </div>
+
+
+    </body>
+
+</html>

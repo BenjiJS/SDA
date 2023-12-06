@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .red {
+                color: red;
+            }
+
+            .underline {
+                text-decoration: underline;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+
+            div>div>div.bold.underline {
+                color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h2 class="red underline">Hlavni nadpis</h2>
+
+        <div>
+            <span class="red underline bold">C</span>ervena
+
+            <br>
+            <br>
+
+            <div>
+                <div class="red underline bold">C</div>ervena
+            </div>
+        </div>
+
+        <div>
+            <div class="red underline bold">C</div>ervena
+        </div>
+    </body>
+
+</html>

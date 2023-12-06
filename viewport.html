@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            /*
+                @see https://www.joshwcomeau.com/css/custom-css-reset/
+            1. Use a more-intuitive box-sizing model.
+            */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                height: 100vh;
+            }
+
+            .obdelnik-viewport {
+                border: 1px solid red;
+                /* musim odecist 2px kvuli ohraniceni (1px zhora a 1px sdola)*/
+                /* height: calc(100% - 2px); */
+                height: 100%;
+                width: 50vw;
+            }
+
+            .obdelnik-procenta {
+                border: 1px solid green;
+                height: 50%;
+                width: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="obdelnik-viewport">
+
+            <div class="obdelnik-procenta"></div>
+
+        </div>
+
+    </body>
+
+</html>
