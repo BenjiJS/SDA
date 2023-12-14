@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function yearChecker() {
+            const userInput = prompt("Enter Your Year of Birth")
+                     
+            let year = Number(userInput)
+            let currentYear = new Date().getFullYear()
+            let age = currentYear - year
+            console.log(year)
+            console.log(age)
+
+            if (isNaN(year)) {
+                alert("Please Enter a Number")
+                yearChecker()
+            }
+            else{
+            if (age >= 65 && age < 130) {
+
+                alert("Congratulations on Your Ripe Old Age!");
+
+            }
+            else {
+                if (age > 130) {
+
+                    alert("Make Sure You Entered Your YEAR of Birth (You Seem a Bit Too Old)")
+                    yearChecker()
+                }
+                else {
+                    if (age = NaN) {
+                        alert("Please Enter a Number")
+                        yearChecker()
+                    }
+                    else {
+                         alert("Nice!");
+                        }
+                    }
+                }
+            }
+
+        }
+            yearChecker();
+
+    </script>
+
+</body>
+
+</html>

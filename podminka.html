@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        const vstupOdUzivatela = prompt('zadaj vek');
+
+
+        const vek = Number(vstupOdUzivatela);
+        //Number('daco') -> NaN (Not a Number)
+
+        if(Number.isNaN(vek)){
+            console.log('number neni cislo')
+        } else {
+            if (vek >= 18){
+            //ked plati podmienka tak zrob toten tu kod
+            console.log("uzivatel je roven nebo strasi 18let", vek)
+        }
+           else {
+            //podminka neplati tak proved toto
+            console.log('uzivatel je mladsi 18 let', vek)
+
+        }
+    }
+        console.log("typ promptu",typeof vek)
+
+        // podmienka zacina IF
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+
+<body>
+    
+    <script>/* komentar 
+    
+    lol
+    */
+        // alert("HALO")
+        console.log("Hello World!!!!");
+        // alert("ERROR")
+        document.write("<b>Zapsaano<b>")
+//riadkovy komentar
+/**
+ * *
+ * *
+ * viceradkovy na generovanie dokumentacie  JSDOC.APP pozriet
+ * 
+ */
+    </script>
+
+<script src="scripts.js"></script>
+
+<script>
+    //1. deklaracia vytvorenie premenej
+    var premena;
+    // 2. init priradenie hodnoty 
+    premena = 9;
+    // both ATST
+    var x = 9 - 5;
+    console.log("toto je vysledok premennej x:",x)
+    // HOISTING CONCEPT !!!!!!
+
+
+
+</script>
+
+<script>
+    // promenna typu var je spatna protoze ma vedlejsi efekty
+    // pouzivame let
+    let barva = "cervena";
+    console.log("barva =",barva)
+    barva = "zluta";
+    console.log("teraz je ze =",barva)
+    barva = "modra";
+    console.log("a ",barva);
+
+    // konstanta musi byt rovno inicializovana
+    const rodneCislo = 1234;
+    // rodneCislo = 123  je type error - nedasa modifikovat konstanta
+
+
+</script>
+
+
+<script>
+// VZDY UKLADAT ROVNAKY TYP HODNOTY DO PREMENNEJ
+    let rok = 2023;
+    rok = "1991"; //no bueno lebo je to text
+    //  javascriptu to nevadi ale TYPESCRIPTu to vadi
+</script>
+
+
+
+<script>
+    // OPERACE
+
+    // operator ++ je inkrementacia +1
+    // operator -- je dekrementacia -1
+    let vek = 40;
+    console.log("muj vek je",vek);
+    vek++;
+    console.log("moj vek +1",vek)
+    
+    ++vek;
+    console.log('moj vek ',vek)
+// rozdiel medzi --vek a vek--
+let vek2 = 20;
+let vek3 = 30
+console.log('moj vek +1',vek2++) // postfix
+console.log('moj vek +1',++vek3) // prefix
+
+</script>
+
+<script>
+    // modulo operator
+    // pouziva sa pri zistovani ci je cislo parne alebo neparne
+    const parneCislo = 4;
+    const neparneCislo = 5;
+    console.log(parneCislo % 2); // ked vysledok = 0 , cislo je parne
+    console.log(neparneCislo % 2) // ked vysledok = 1, cislo je neparne
+
+    // 1,2,3,4 -> posloupnost obsahuje sudy pocet prvku???
+
+</script>
+
+<script>
+    //skratky pre operaatore
+
+let z = 5;
+z = z + 5
+z += 5;
+z++
+
+//concatenation
+const text1 = 'dobry'
+const text2 = 'den'
+const text3 = text1 + ' ' + text2
+console.log(text3)
+console.log('pocet znakov v premennej text3 je',text3.length)
+const delkaTextu3 = text3.length
+const maText3SudyPocetZnakov = delkaTextu3 % 2;
+console.log(maText3SudyPocetZnakov)
+
+let xyz; // undefined
+console.log(xyz)
+xyz=null
+console.log(xyz)
+
+</script>
+
+
+
+</body>
+
+</html>

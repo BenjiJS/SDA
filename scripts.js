@@ -1,0 +1,1 @@
+console.log("pozdrav zo suboru script.js");
