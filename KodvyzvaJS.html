@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+    function evaluatePensionStatus(){
+
+        function isUserInputValid(userInput){
+            let year = Number(userInput)
+            let userInputAge = new Date().getFullYear() - year            
+            let age = Number.isInteger(userInputAge) && userInputAge >= 0 && userInputAge <= 130;
+            return {
+                age: userInputAge,
+                booleanValue: age
+            }
+        }
+
+        function getUserBirthDate(){
+        let userInput;
+                do {
+                    if (userInput !== undefined) {
+                        alert("Type in Correct Input (Year of Birth)")
+                    }
+                    userInput = prompt("Enter Year of Birth:")
+            }   while (!isUserInputValid(userInput).booleanValue)  
+        return isUserInputValid(userInput).age
+        }
+        let age = getUserBirthDate()
+        function isUserInPension(age){
+            return age >= 65 && age < 130;
+        }
+
+
+        if (isUserInPension(age)) {
+            alert("Congratulations on Your Ripe Old Age!");
+        } else {
+            let ageLeft = 65 - age
+            alert("You Still Have to Work " + ageLeft + " More Years")
+        }
+    
+}
+
+    </script>
+    <button onclick="evaluatePensionStatus()">Evaluate Your Retirement Status</button>
+</body>
+
+</html>
