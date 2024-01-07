@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <script>
+
+            const ovoce = ["jablko", "hruska", "meloun"];
+
+            console.log(ovoce, ovoce.length);
+
+            // ovoce = ["mrkev", 'kedlubna', "petrzel"];
+
+            console.log(ovoce)
+
+            // JavaScript - je dynamicky typovany jazyk
+            const vsehochut = [123, "asdad", true, null, undefined, NaN, [1, 2, 3, 4]];
+            console.log(vsehochut);
+
+
+            // jaka je polozka na indexu 0 v poli ovoce? = cteni hodnot
+            console.log("Prvni polozka v ovoce je:", ovoce[0]);
+            console.log("Druha polozka v ovoce je:", ovoce[1]);
+            console.log("Treti polozka v ovoce je:", ovoce[2]);
+            console.log("Ctvrta polozka v ovoce je:", ovoce[3]);
+
+            // zapis hodnot do pole / uprava hodnot
+            const puvodniHodnotaNaIndexu0 = ovoce[0]; // jablko
+            ovoce[0] = "pomeranc";
+            console.log("misto:", puvodniHodnotaNaIndexu0, "je:", ovoce[0]);
+
+            // jak pridat hodnotu na konec pole (bez toho, aniz bychom pouzili specificke cislo)
+
+            // .length = kolik je hodnot v poli
+            const posledniIndex = ovoce.length - 1; // mohu dat rovnou i do [...]
+            console.log("Posledni polozka v poli ovoce je:", ovoce[posledniIndex]);
+
+            // Vlozeni polozky na konec pole
+            ovoce[ovoce.length] = "Nejake nove ovoce";
+            console.log("nove pole ovoce", ovoce);
+
+            // NOVA POLOZKA SE VKLADA POMOCI funkce push
+            ovoce.push("DRACI OVOCE")
+
+            // Smazani prvni hodnoty z pole
+            const smazanaPolozkaNaIndexu0 = ovoce.shift();
+            console.log("Pole ovoce uz nyni neobsahuje", smazanaPolozkaNaIndexu0, ovoce);
+
+            // smazani posledni hodnoty z pole
+            const smazanaPosledniPolozka = ovoce.pop();
+            console.log("Pole ovoce uz neobsahuje", smazanaPosledniPolozka, ovoce);
+
+            // smazani podle hodnoty 
+            // 1. nalezeni indexu hodnoty
+            const indexMelounu = ovoce.indexOf("meloun");
+            console.log("Index melounu je:", indexMelounu);
+            // 2. smazani hodnoty podle nalezeneho indexu
+            ovoce.splice(indexMelounu, 1); // 1 predstavuje kolik chceme smazat polozek = 1
+            console.log("Nove pole ovoce", ovoce);
+
+
+            const sudaCisla = [0, 2, 4, 6, 8];
+            console.log(sudaCisla);
+
+            // funkce splice - umi mazat libovolne mnozsti polozek v poli od nejakeho indexu
+            const smazanaSudaCisla = sudaCisla.splice(2, 1);
+            console.log("smazana suda cisla jsou:", smazanaSudaCisla, "suda cisla", sudaCisla)
+
+
+            // vypsani vsech polozek v poli
+
+            const auta = ['Ford', "Skoda", "Subaru", "Audi", "BMW"];
+            for (let i = 0; i < auta.length; i++) {
+                console.log("Na indexu", i, "je:", auta[i]);
+            }
+
+            console.log("--------");
+
+            for (let i = auta.length - 1; i >= 0; i--) {
+                console.log("Na indexu", i, "je:", auta[i]);
+            }
+
+        </script>
+
+
+    </body>
+
+</html>

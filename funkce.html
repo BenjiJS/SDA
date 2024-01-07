@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <script>
+            // 1. vytvorime si funkci, ktera nam vypisuje nejaky text do konzole
+            function vypisTextDoKonzole() {
+                // Tady je telo funkce, ktere se provede
+                console.log("Ahoj z funkce!");
+            }
+
+            // 2. samotne pouziti funkce (volani funkce)
+            vypisTextDoKonzole();
+            vypisTextDoKonzole();
+            vypisTextDoKonzole();
+            vypisTextDoKonzole();
+            vypisTextDoKonzole();
+            vypisTextDoKonzole();
+
+            // Vytvorme si funkci, ktera do konzole pozdravi uzivtele podle jeho jmena
+            function pozdravUzivatele(uzivatelovoJmeno) { // parametr funkce (jeho hodnota je definova pri zavolani)
+                console.log("Ahoj super", uzivatelovoJmeno);
+            }
+
+            pozdravUzivatele("Karle");
+            pozdravUzivatele("Pepo");
+
+            function secti(x, y, z) {
+                let soucet = 0;
+
+                // Number.isFinite
+                if (Number.isFinite(x)) soucet += x;
+                if (Number.isFinite(y)) soucet += y;
+                if (Number.isFinite(z)) soucet += z;
+
+                // vratit cislo zpet z funkce do programu
+                // tak puziji prikaz return
+                return soucet; // tady konci konci funkce, nic dal uz se neprovede
+
+                console.log("Vypis souctu ja returnem", soucet);
+            }
+
+            // const vek = prompt("zadej nam svuj vek")
+            const soucet = secti(4, 1, "asdasldhaskjdh");
+            console.log("SOUCET JE:", soucet);
+
+
+            const vysledek = secti(1, secti(4, 5, "neco"), -4);
+            console.log("Vysledek je", vysledek)
+
+            function deleni(a, b) {
+                // if (b === 0) {
+                //     console.log("NEMUZES DELIT NULOU");
+                //     return null
+                // }
+
+                if (b === 0) {
+                    throw Error("Nelze delit nulou");
+                }
+
+                return a / b;
+            }
+
+            // try-catch (kontrukce) - 
+
+            try {
+                console.log("deleni", deleni(4, 0));
+            } catch (vyjimka) {
+                console.log("zachycena vyjimka", vyjimka)
+            }
+
+            console.log("Po deleni");
+
+        </script>
+
+
+    </body>
+
+</html>

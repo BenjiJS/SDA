@@ -10,45 +10,67 @@
 <body>
 
     <script>
-    function evaluatePensionStatus(){
 
-        function isUserInputValid(userInput){
-            let year = Number(userInput)
-            let userInputAge = new Date().getFullYear() - year            
-            let age = Number.isInteger(userInputAge) && userInputAge >= 0 && userInputAge <= 130;
-            return {
-                age: userInputAge,
-                booleanValue: age
+
+        function isUserInputValid(inputBeingValidated) {
+            const currentDate = new Date().getFullYear()
+            const convertedInput = Number(inputBeingValidated)
+            
+
+            return inputBeingValidated === "" ||
+                inputBeingValidated === null ||
+                convertedInput >= Number(currentDate) ||
+                convertedInput <= 0 ||
+                (Number(currentDate) - 130) >= convertedInput ||
+                !Number.isInteger(convertedInput) ||
+                isNaN(convertedInput);
+        }
+
+
+
+        function getUserBirthYear() {
+            let userInput;
+           
+            do {
+                if (userInput !== undefined) {
+                    alert("Type in Correct Input (Year of Birth)")
+                }
+                userInput = prompt("Enter Year of Birth:")
+            } while (isUserInputValid(userInput))
+
+            return userInput
+        }
+
+
+
+        function isUserInPension(inputYear) {
+            let year = Number(inputYear)
+            let userAge = new Date().getFullYear() - year
+            return userAge >= 65 && userAge < 130;
+        }
+
+        function evaluatePensionStatus() {
+
+            let inputFromUser = getUserBirthYear()
+            if (isUserInPension(inputFromUser)) {
+                alert("Congratulations on Your Age")
+            } else {
+                alert("Work More")
             }
-        }
-
-        function getUserBirthDate(){
-        let userInput;
-                do {
-                    if (userInput !== undefined) {
-                        alert("Type in Correct Input (Year of Birth)")
-                    }
-                    userInput = prompt("Enter Year of Birth:")
-            }   while (!isUserInputValid(userInput).booleanValue)  
-        return isUserInputValid(userInput).age
-        }
-        let age = getUserBirthDate()
-        function isUserInPension(age){
-            return age >= 65 && age < 130;
-        }
 
 
-        if (isUserInPension(age)) {
-            alert("Congratulations on Your Ripe Old Age!");
-        } else {
-            let ageLeft = 65 - age
-            alert("You Still Have to Work " + ageLeft + " More Years")
         }
-    
-}
 
     </script>
+
+
+
+
     <button onclick="evaluatePensionStatus()">Evaluate Your Retirement Status</button>
+
+
+
+
 </body>
 
 </html>
