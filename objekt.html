@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            const auto = {
+                barva: "cervena",
+                vaha: 1200,
+                rokVyroby: 1980,
+            };
+
+            console.log("Objekt auto", auto);
+
+            const tomas = {
+                name: "Tomas",
+                barvaVlasu: "cerna",
+                barvaOci: "modra",
+                vaha: 90,
+            };
+
+            const pepa = {
+                name: "Pepa",
+                barvaVlasu: "zrzava",
+                barvaOci: "hneda",
+                vaha: 200
+            };
+
+            // 2 zpusoby pristupu k hodnotam v objektu
+
+            // 1. zpusob - zavorkove notace (uplne stejne jako v polich)
+            console.log("Pepa vazi", pepa['vaha'], "kg");
+            // 2. zpusob - teckova notace (zkracena zavorkova notace)
+            console.log(pepa.vaha);
+
+            pepa.vaha = 50;
+            console.log(pepa.vaha);
+
+            // smazani hodnoty v objektu (pomoci prikazu delete)
+            delete pepa.vaha;
+            console.log(pepa.vaha); // stejne jako na poli vypise undefined
+
+            const poleLidi = [tomas, pepa, { name: "Karel", barvaVlasu: "cervena", barvaOci: "fialova", vaha: 30 }];
+            console.log("poleLidi", poleLidi);
+
+            // ukol: spocitat vahu vsech lidi v poli
+
+            let vahaVsechLidi = 0;
+
+            for (const clovek of poleLidi) {
+                if (clovek.vaha) { // clovek.vaha = undefined | null | NaN | false | 0 -> Boolean(...) = false
+                    vahaVsechLidi += clovek.vaha;
+                } else {
+                    console.log("Cloveku", clovek.name, "chybi vaha!!!!");
+                }
+            }
+
+            console.log("vaha vsech lidi", vahaVsechLidi);
+
+        </script>
+
+    </body>
+
+</html>
